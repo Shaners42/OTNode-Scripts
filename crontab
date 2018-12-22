@@ -7,6 +7,9 @@
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
+#5 minutes past the hour
 5 * * * *      root /bin/bash   /home/otnode-scripts/smtp_contract_offers_1hr.sh
+#24 hours at 6am
 0 6 * * *      root /bin/bash   /home/otnode-scripts/smtp_contract_offers_24hr.sh
+#24 hours at 7am
 0 7 * * *      root /bin/bash   /home/otnode-scripts/otnode-cleanlogs24hr.sh
