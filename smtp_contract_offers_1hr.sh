@@ -5,7 +5,6 @@
 #It runs outside Docker and looks at Docker logs (Container ID is statically set)
 #Disclaimer: I'm not a developer and everything here is very badly coded. It's just here so I can keep track. 
 
-gunzip /ot-node/logs/*.gz
 awk -v d="$(date -d'24 hours ago' +'{"log":"%Y-%m-%dT%k:%M:%S')" '$1" "$2>=d &&/ve been chosen for offer/' /var/lib/docker/containers/516*/516*-json.log > /home/output24hr.txt
 
 strCountOffers="Number of offers over the last 24 hours: "
